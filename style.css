@@ -1,0 +1,1353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #050505;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.landing-body {
+    min-height: 100vh;
+    background: #000;
+}
+
+.landing-header {
+    height: 95px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #000000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    position: relative;
+    z-index: 10;
+}
+
+.landing-logo {
+    width: 190px;
+    height: 75px;
+    object-fit: contain;
+}
+
+/* =========================
+   TWO MAIN OPTIONS
+========================= */
+
+.business-selector {
+    height: calc(100vh - 95px);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.business-card {
+    position: relative;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 65px;
+
+    min-height: 600px;
+
+    transition: 0.5s ease;
+}
+
+/* OTOMOTIV BACKGROUND */
+
+.automotive-card {
+    background-image: url("assets/automotive.jpg");
+}
+
+/* INSAAT BACKGROUND */
+
+.construction-card {
+    background-image: url("assets/construction.jpg");
+}
+
+/* DARK EFFECT */
+
+.business-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.55) 55%,
+            rgba(0, 0, 0, 0.25) 100%
+        );
+
+    transition: 0.5s;
+}
+
+/* HOVER */
+
+.business-card:hover {
+    transform: scale(1.01);
+}
+
+.business-card:hover .business-overlay {
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(0, 0, 0, 0.35) 55%,
+            rgba(0, 0, 0, 0.1) 100%
+        );
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.business-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 500px;
+}
+
+.business-number {
+    font-size: 11px;
+    letter-spacing: 4px;
+
+    color: #8b8b8b;
+}
+
+.business-content h1 {
+    font-size: clamp(50px, 6vw, 95px);
+
+    font-weight: 700;
+
+    letter-spacing: -4px;
+
+    margin-top: 12px;
+    margin-bottom: 15px;
+}
+
+.business-content p {
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    max-width: 390px;
+
+    color: #b7b7b7;
+}
+
+/* =========================
+   EXPLORE BUTTON
+========================= */
+
+.explore-button {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 32px;
+
+    padding-bottom: 8px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    border-bottom: 1px solid #ffffff;
+}
+
+.arrow {
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+.business-card:hover .arrow {
+    transform: translateX(8px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.landing-footer {
+    display: none;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  
+  .landing-header {
+    height: 105px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    background: #000000;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    position: relative;
+    z-index: 10;
+}
+    }
+
+    .landing-logo {
+    width: 210px;
+    height: 90px;
+
+    object-fit: cover;
+    object-position: center;
+
+    transform: scale(1.08);
+}
+    
+
+   .business-selector {
+    height: calc(100vh - 105px);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+    
+
+    .business-card {
+        min-height: 50vh;
+
+        padding: 35px;
+    }
+
+    .business-content h1 {
+        font-size: 48px;
+
+        letter-spacing: -2px;
+    }
+
+    .business-content p {
+        font-size: 14px;
+    }
+
+/* ======================================
+   OTOMOTIV PAGE
+====================================== */
+
+
+/* NAVBAR */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 95px;
+
+    padding: 0 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 100;
+
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+
+    background: rgba(0,0,0,0.18);
+    backdrop-filter: blur(5px);
+}
+
+
+.brand {
+    color: white;
+
+    font-size: 22px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.brand span {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 8px;
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    color: #999;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+}
+
+
+.nav-links a {
+    color: #c7c7c7;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: white;
+}
+
+
+.nav-links .switch-business {
+    padding: 13px 20px;
+
+    border: 1px solid rgba(255,255,255,0.4);
+
+    color: white;
+}
+
+
+.nav-links .switch-business:hover {
+    background: white;
+
+    color: black;
+}
+
+
+
+/* HERO */
+
+.automotive-hero-page {
+    height: 100vh;
+
+    position: relative;
+
+    background-image: url("assets/automotive.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 0 6% 8%;
+}
+
+
+.automotive-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.92) 0%,
+            rgba(0,0,0,0.66) 42%,
+            rgba(0,0,0,0.15) 100%
+        );
+}
+
+
+.automotive-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1000px;
+}
+
+
+.small-title {
+    color: #8d8d8d;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+}
+
+
+.automotive-hero-content h1 {
+    margin-top: 25px;
+
+    font-size: clamp(60px, 8vw, 130px);
+    line-height: 0.92;
+
+    letter-spacing: -6px;
+
+    max-width: 1100px;
+}
+
+
+.automotive-hero-content p {
+    margin-top: 30px;
+
+    max-width: 500px;
+
+    color: #bcbcbc;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+.main-button {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 40px;
+
+    padding: 17px 25px;
+
+    border: 1px solid white;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+
+.main-button:hover {
+    background: white;
+
+    color: black;
+}
+
+
+
+/* ABOUT */
+
+.about-section {
+    padding: 130px 6%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    border-bottom: 1px solid #1b1b1b;
+}
+
+
+.about-left h2 {
+    margin-top: 25px;
+
+    font-size: clamp(50px, 5vw, 80px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+}
+
+
+.about-right {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    gap: 25px;
+}
+
+
+.about-right p {
+    max-width: 550px;
+
+    color: #8f8f8f;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+}
+
+
+
+/* CARS */
+
+.cars-section {
+    padding: 130px 6%;
+
+    background: #0b0b0b;
+}
+
+
+.section-top {
+    margin-bottom: 60px;
+}
+
+
+.section-top h2 {
+    margin-top: 18px;
+
+    font-size: clamp(45px, 5vw, 75px);
+
+    letter-spacing: -4px;
+}
+
+
+.cars-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.car-card {
+    background: #101010;
+
+    border: 1px solid #202020;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+}
+
+
+.car-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #454545;
+}
+
+
+.car-image {
+    height: 300px;
+
+    overflow: hidden;
+}
+
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+
+.car-card:hover .car-image img {
+    transform: scale(1.04);
+}
+
+
+.car-info {
+    padding: 27px;
+}
+
+
+.car-top {
+    display: flex;
+    justify-content: space-between;
+
+    color: #666;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+.car-info h3 {
+    margin: 15px 0 22px;
+
+    font-size: 24px;
+
+    font-weight: 500;
+}
+
+
+.car-specs {
+    display: flex;
+
+    gap: 18px;
+
+    color: #818181;
+
+    font-size: 11px;
+}
+
+
+.car-bottom {
+    margin-top: 30px;
+
+    padding-top: 24px;
+
+    border-top: 1px solid #292929;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.car-bottom strong {
+    font-size: 20px;
+}
+
+
+.car-bottom a {
+    color: #969696;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+.car-bottom a:hover {
+    color: white;
+}
+
+
+
+/* CONTACT */
+
+.automotive-contact {
+    padding: 130px 6%;
+
+    background: #050505;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+}
+
+
+.contact-intro h2 {
+    margin-top: 20px;
+
+    font-size: clamp(50px, 5vw, 80px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+}
+
+
+.contact-intro p {
+    margin-top: 30px;
+
+    max-width: 500px;
+
+    color: #898989;
+
+    line-height: 1.8;
+}
+
+
+.people-list {
+    border-top: 1px solid #292929;
+}
+
+
+.person-card {
+    padding: 32px 0;
+
+    border-bottom: 1px solid #292929;
+}
+
+
+.person-role {
+    margin-bottom: 12px;
+
+    color: #626262;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+
+.person-card h3 {
+    margin-bottom: 20px;
+
+    font-size: 26px;
+
+    font-weight: 500;
+}
+
+
+.person-card a {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #999;
+
+    transition: 0.3s;
+}
+
+
+.person-card a:hover {
+    color: white;
+}
+
+
+
+/* FOOTER */
+
+.site-footer {
+    padding: 45px 6%;
+
+    background: #000;
+
+    border-top: 1px solid #171717;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: end;
+}
+
+
+.footer-logo {
+    font-size: 20px;
+
+    font-weight: 800;
+}
+
+
+.footer-logo span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #696969;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+}
+
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+
+.footer-links a {
+    color: #747474;
+
+    font-size: 12px;
+}
+
+
+.site-footer > p {
+    text-align: right;
+
+    color: #555;
+
+    font-size: 11px;
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .nav-links a:not(.switch-business) {
+        display: none;
+    }
+
+
+    .navbar {
+        padding: 0 25px;
+    }
+
+
+    .automotive-hero-page {
+        padding: 0 25px 70px;
+    }
+
+
+    .automotive-hero-content h1 {
+        font-size: 62px;
+
+        letter-spacing: -4px;
+    }
+
+
+    .about-section,
+    .automotive-contact {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        padding: 90px 25px;
+    }
+
+
+    .cars-section {
+        padding: 90px 25px;
+    }
+
+
+    .cars-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .car-image {
+        height: 280px;
+    }
+
+
+    .site-footer {
+        padding: 40px 25px;
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .footer-links {
+        justify-content: flex-start;
+    }
+
+
+    .site-footer > p {
+        text-align: left;
+    }
+
+}
+/* ======================================
+   CONSTRUCTION PAGE
+====================================== */
+
+
+/* HERO */
+
+.construction-hero-page {
+    height: 100vh;
+
+    position: relative;
+
+    background-image: url("assets/construction.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 0 6% 8%;
+}
+
+
+.construction-hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.94) 0%,
+            rgba(0, 0, 0, 0.68) 45%,
+            rgba(0, 0, 0, 0.15) 100%
+        );
+}
+
+
+.construction-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1000px;
+}
+
+
+.construction-hero-content h1 {
+    margin-top: 25px;
+
+    font-size: clamp(65px, 8vw, 135px);
+
+    line-height: 0.92;
+
+    letter-spacing: -7px;
+}
+
+
+.construction-hero-content p {
+    margin-top: 30px;
+
+    max-width: 530px;
+
+    color: #bcbcbc;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* ======================================
+   ABOUT
+====================================== */
+
+.construction-about {
+    padding: 130px 6%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    background: #070707;
+
+    border-bottom: 1px solid #1b1b1b;
+}
+
+
+.construction-about-left h2 {
+    margin-top: 25px;
+
+    font-size: clamp(50px, 5vw, 80px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+}
+
+
+.construction-about-right {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    gap: 25px;
+}
+
+
+.construction-about-right p {
+    max-width: 550px;
+
+    color: #919191;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+}
+
+
+/* ======================================
+   SERVICES
+====================================== */
+
+.construction-services {
+    padding: 130px 6%;
+
+    background: #0c0c0c;
+}
+
+
+.construction-section-title h2 {
+    margin-top: 20px;
+
+    font-size: clamp(50px, 5vw, 80px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+}
+
+
+.construction-service-grid {
+    margin-top: 70px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid #272727;
+
+    border-left: 1px solid #272727;
+}
+
+
+.construction-service-card {
+    min-height: 320px;
+
+    padding: 45px;
+
+    border-right: 1px solid #272727;
+
+    border-bottom: 1px solid #272727;
+
+    transition: 0.4s ease;
+}
+
+
+.construction-service-card:hover {
+    background: #151515;
+}
+
+
+.service-number {
+    color: #5f5f5f;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+
+.construction-service-card h3 {
+    margin-top: 50px;
+
+    margin-bottom: 20px;
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    letter-spacing: -1px;
+}
+
+
+.construction-service-card p {
+    max-width: 430px;
+
+    color: #858585;
+
+    line-height: 1.8;
+}
+
+
+/* ======================================
+   PROJECTS
+====================================== */
+
+.construction-projects {
+    padding: 130px 6%;
+
+    background: #070707;
+}
+
+
+.projects-heading h2 {
+    margin-top: 20px;
+
+    font-size: clamp(48px, 5vw, 75px);
+
+    letter-spacing: -4px;
+}
+
+
+.construction-project-grid {
+    margin-top: 60px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+.construction-project-card {
+    position: relative;
+
+    height: 550px;
+
+    overflow: hidden;
+
+    background: #111;
+}
+
+
+.construction-project-card.large-project {
+    grid-column: span 2;
+
+    height: 620px;
+}
+
+
+.construction-project-card img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+
+.construction-project-card:hover img {
+    transform: scale(1.05);
+}
+
+
+.construction-project-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 40px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.95) 0%,
+            rgba(0,0,0,0.35) 45%,
+            rgba(0,0,0,0.05) 75%
+        );
+}
+
+
+.construction-project-overlay span {
+    color: #8d8d8d;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+
+.construction-project-overlay h3 {
+    margin-top: 10px;
+
+    font-size: 34px;
+
+    font-weight: 500;
+
+    letter-spacing: -1px;
+}
+
+
+.construction-project-overlay p {
+    margin-top: 8px;
+
+    color: #999;
+
+    font-size: 13px;
+}
+
+
+/* ======================================
+   CONTACT
+====================================== */
+
+.construction-contact {
+    padding: 130px 6%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    background: #040404;
+}
+
+
+.construction-contact-intro h2 {
+    margin-top: 20px;
+
+    font-size: clamp(50px, 5vw, 80px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+}
+
+
+.construction-contact-intro p {
+    margin-top: 30px;
+
+    max-width: 500px;
+
+    color: #898989;
+
+    line-height: 1.8;
+}
+
+
+.construction-people-list {
+    border-top: 1px solid #292929;
+}
+
+
+.construction-person-card {
+    padding: 32px 0;
+
+    border-bottom: 1px solid #292929;
+}
+
+
+.construction-person-card > span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #626262;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+
+.construction-person-card h3 {
+    margin-bottom: 20px;
+
+    font-size: 26px;
+
+    font-weight: 500;
+}
+
+
+.construction-person-card a {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #999999;
+
+    transition: 0.3s;
+}
+
+
+.construction-person-card a:hover {
+    color: white;
+}
+
+
+/* ======================================
+   MOBILE CONSTRUCTION
+====================================== */
+
+@media (max-width: 900px) {
+
+    .construction-hero-page {
+        padding: 0 25px 70px;
+    }
+
+
+    .construction-hero-content h1 {
+        font-size: 62px;
+
+        letter-spacing: -4px;
+    }
+
+
+    .construction-about {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        padding: 90px 25px;
+    }
+
+
+    .construction-services {
+        padding: 90px 25px;
+    }
+
+
+    .construction-service-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .construction-projects {
+        padding: 90px 25px;
+    }
+
+
+    .construction-project-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .construction-project-card {
+        height: 430px;
+    }
+
+
+    .construction-project-card.large-project {
+        grid-column: span 1;
+
+        height: 430px;
+    }
+
+
+    .construction-contact {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        padding: 90px 25px;
+    }
+
+}
