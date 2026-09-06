@@ -2,7 +2,6 @@
 <html lang="tr">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -14,9 +13,8 @@
 
   <meta
     name="description"
-    content="Karakılıç Otomotiv ve İnşaat. 2006'dan beri Giresun'da otomotiv, 2019'dan itibaren inşaat sektöründe güven, kalite ve hizmet."
+    content="Karakılıç Otomotiv ve İnşaat. Giresun'da otomotiv, inşaat projeleri ve kiralık Zoomlion ZT2506 telehandler iş makinesi hizmetleri."
   >
-
 
   <style>
 
@@ -748,6 +746,151 @@
 
 
     /* =====================================================
+       KİRALIK İŞ MAKİNESİ / TELEHANDLER
+    ===================================================== */
+
+    .equipment-rental {
+      padding: 120px 6%;
+
+      background: #0b0b0b;
+
+      border-top: 1px solid #1f1f1f;
+      border-bottom: 1px solid #1f1f1f;
+    }
+
+    .equipment-rental-inner {
+      max-width: 1400px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: 1.15fr 0.85fr;
+
+      gap: 75px;
+
+      align-items: center;
+    }
+
+    .equipment-image-wrap {
+      position: relative;
+
+      min-height: 620px;
+
+      overflow: hidden;
+
+      background: #151515;
+    }
+
+    .equipment-image-wrap img {
+      width: 100%;
+      height: 100%;
+
+      min-height: 620px;
+
+      object-fit: cover;
+
+      transition: transform 0.65s ease;
+    }
+
+    .equipment-image-wrap:hover img {
+      transform: scale(1.025);
+    }
+
+    .equipment-badge {
+      position: absolute;
+
+      top: 24px;
+      left: 24px;
+
+      padding: 10px 15px;
+
+      background: #ffffff;
+      color: #000000;
+
+      font-size: 10px;
+      font-weight: 700;
+
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+    }
+
+    .equipment-copy .section-label {
+      margin-bottom: 20px;
+    }
+
+    .equipment-copy h2 {
+      margin-bottom: 30px;
+
+      font-size: clamp(42px, 5vw, 72px);
+
+      line-height: 0.95;
+
+      letter-spacing: -2.6px;
+
+      text-transform: uppercase;
+    }
+
+    .equipment-copy p {
+      max-width: 600px;
+
+      color: #a1a1a1;
+
+      font-size: 17px;
+      line-height: 1.85;
+    }
+
+    .equipment-copy p strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .equipment-features {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 9px;
+
+      margin: 30px 0 38px;
+    }
+
+    .equipment-features span {
+      padding: 9px 12px;
+
+      border: 1px solid #353535;
+
+      color: #b7b7b7;
+
+      font-size: 10px;
+
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .equipment-button {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 18px;
+
+      padding: 16px 0;
+
+      border-bottom: 1px solid #ffffff;
+
+      font-size: 12px;
+
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+
+      transition: gap 0.25s ease;
+    }
+
+    .equipment-button:hover {
+      gap: 27px;
+    }
+
+
+    /* =====================================================
        KARAKILIÇ İNŞAAT
     ===================================================== */
 
@@ -1286,6 +1429,7 @@
 
       font-size: 18px;
       font-weight: 600;
+
       letter-spacing: 1px;
       text-transform: uppercase;
     }
@@ -1305,6 +1449,7 @@
       color: #ffffff;
 
       font-size: 11px;
+
       letter-spacing: 1.1px;
       text-transform: uppercase;
     }
@@ -1364,6 +1509,7 @@
       margin-bottom: 7px;
 
       font-size: 20px;
+
       text-transform: uppercase;
     }
 
@@ -1473,7 +1619,6 @@
 
       .timeline-nav {
         flex-direction: row;
-
         flex-wrap: wrap;
 
         gap: 15px 25px;
@@ -1509,6 +1654,17 @@
         gap: 45px;
       }
 
+      .equipment-rental-inner {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+      }
+
+      .equipment-image-wrap,
+      .equipment-image-wrap img {
+        min-height: 500px;
+      }
+
       .project-grid {
         grid-template-columns: 1fr;
       }
@@ -1531,7 +1687,6 @@
 
       .footer {
         flex-direction: column;
-
         align-items: flex-start;
 
         gap: 10px;
@@ -1658,6 +1813,23 @@
         font-size: 45px;
       }
 
+      .equipment-rental {
+        padding: 85px 5%;
+      }
+
+      .equipment-image-wrap,
+      .equipment-image-wrap img {
+        min-height: 390px;
+      }
+
+      .equipment-copy h2 {
+        font-size: 43px;
+      }
+
+      .equipment-copy p {
+        font-size: 15px;
+      }
+
       .construction-intro {
         padding: 95px 7% 60px;
       }
@@ -1689,7 +1861,9 @@
 
       .gallery-info {
         bottom: 14px;
+
         width: calc(100% - 24px);
+
         padding: 14px 16px;
       }
 
@@ -1916,7 +2090,9 @@
       </div>
 
 
-      <!-- TARİHÇE -->
+      <!-- =================================================
+           TARİHÇE
+      ================================================== -->
 
       <div class="history">
 
@@ -2090,6 +2266,86 @@
         Sahibinden'deki Tüm Araçlarımızı Gör
         <span>↗</span>
       </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       KİRALIK İŞ MAKİNESİ / TELEHANDLER
+  ====================================================== -->
+
+  <section
+    class="equipment-rental"
+    id="kiralik-is-makinesi"
+  >
+
+    <div class="equipment-rental-inner">
+
+
+      <div class="equipment-image-wrap">
+
+        <img
+          src="assets/vehicles/telehandler.png"
+          alt="Kiralık Zoomlion ZT2506 telehandler iş makinesi"
+          loading="lazy"
+        >
+
+        <span class="equipment-badge">
+          Kiralık
+        </span>
+
+      </div>
+
+
+      <div class="equipment-copy">
+
+        <div class="section-label">
+          KİRALIK İŞ MAKİNESİ
+        </div>
+
+        <h2>
+          ZOOMLION<br>
+          ZT2506<br>
+          TELEHANDLER
+        </h2>
+
+        <p>
+          Şantiye, depo ve saha çalışmalarında malzeme taşıma,
+          yükleme ve yüksek erişim gerektiren işler için
+          <strong>Zoomlion ZT2506 Telehandler</strong> kiralama
+          hizmetimiz bulunmaktadır. Kiralama süresi, müsaitlik
+          durumu ve detaylı bilgi için ekibimizle iletişime
+          geçebilirsiniz.
+        </p>
+
+        <div class="equipment-features">
+
+          <span>
+            Telehandler
+          </span>
+
+          <span>
+            İş Makinesi Kiralama
+          </span>
+
+          <span>
+            Şantiye &amp; Saha Kullanımı
+          </span>
+
+        </div>
+
+        <a
+          href="#iletisim"
+          class="equipment-button"
+        >
+          Kiralama Bilgisi Al
+          <span>→</span>
+        </a>
+
+      </div>
+
 
     </div>
 
@@ -2443,6 +2699,8 @@
       <div class="contact-people">
 
 
+        <!-- UĞUR -->
+
         <div class="contact-person">
 
           <h3>
@@ -2467,6 +2725,8 @@
 
         </div>
 
+
+        <!-- ONUR -->
 
         <div class="contact-person">
 
@@ -2493,6 +2753,8 @@
         </div>
 
 
+        <!-- EMRE -->
+
         <div class="contact-person">
 
           <h3>
@@ -2517,6 +2779,8 @@
 
         </div>
 
+
+        <!-- NEJAT -->
 
         <div class="contact-person">
 
@@ -2974,7 +3238,6 @@
       grid.innerHTML =
         vehicles
           .map(function(vehicle) {
-
 
             const metaHTML =
               vehicle.meta
@@ -3459,7 +3722,6 @@
 
   </script>
 
-
 </body>
 
-</html>
+</html> 
