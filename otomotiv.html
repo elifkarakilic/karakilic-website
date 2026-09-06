@@ -1,348 +1,425 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Karakılıç Otomotiv</title>
+  <title>Giresun Otomotiv | İkinci El Araç - Karakılıç Otomotiv</title>
 
-    <link rel="stylesheet" href="style.css">
+  <meta
+    name="description"
+    content="Karakılıç Otomotiv Giresun'da ikinci el araç satışı, güncel araç portföyü ve güvenilir otomotiv hizmetleri sunar. Güncel araçlarımızı inceleyin."
+  >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link
+    rel="canonical"
+    href="https://www.karakilic.tr/otomotiv.html"
+  >
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoDealer",
+    "name": "Karakılıç Otomotiv",
+    "url": "https://www.karakilic.tr/otomotiv.html",
+    "logo": "https://www.karakilic.tr/assets/logo.png",
+    "description": "Giresun'da ikinci el araç satışı ve otomotiv hizmetleri.",
+    "telephone": "+90 533 423 17 23",
+    "email": "info@karakilic.tr",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Gedikkaya Mah. Gazi Mustafa Kemal Blv. Serhat Apt. No:188 A",
+      "addressLocality": "Giresun",
+      "addressCountry": "TR"
+    }
+  }
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #fff;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .navbar {
+      height: 100px;
+      padding: 0 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #080808;
+      border-bottom: 1px solid #222;
+    }
+
+    .navbar img {
+      width: 300px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+      font-size: 12px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .nav a:hover {
+      opacity: .65;
+    }
+
+    .hero {
+      min-height: 620px;
+      padding: 120px 7%;
+      display: flex;
+      align-items: flex-end;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0,0,0,.1),
+          rgba(0,0,0,.9)
+        ),
+        url("assets/automotive.jpg") center/cover;
+    }
+
+    .hero-inner {
+      max-width: 850px;
+    }
+
+    .label {
+      margin-bottom: 18px;
+      color: #aaa;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin-bottom: 25px;
+      font-size: clamp(48px, 7vw, 92px);
+      line-height: .95;
+      letter-spacing: -3px;
+      text-transform: uppercase;
+    }
+
+    .hero p {
+      max-width: 700px;
+      color: #d0d0d0;
+      font-size: 18px;
+    }
+
+    .intro {
+      padding: 110px 7%;
+      background: #0c0c0c;
+    }
+
+    .intro-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .intro h2 {
+      max-width: 850px;
+      margin-bottom: 35px;
+      font-size: clamp(34px, 4vw, 56px);
+      line-height: 1.05;
+    }
+
+    .intro p {
+      max-width: 900px;
+      margin-bottom: 20px;
+      color: #aaa;
+      font-size: 17px;
+    }
+
+    .vehicles {
+      padding: 110px 6%;
+    }
+
+    .vehicles-head {
+      max-width: 1400px;
+      margin: 0 auto 55px;
+    }
+
+    .vehicles-head h2 {
+      font-size: clamp(38px, 5vw, 66px);
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .grid {
+      max-width: 1400px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid #222;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .content {
+      padding: 24px;
+    }
+
+    .brand {
+      margin-bottom: 7px;
+      color: #777;
+      font-size: 10px;
+      letter-spacing: 3px;
+    }
+
+    .content h3 {
+      min-height: 56px;
+      font-size: 19px;
+      font-weight: 500;
+    }
+
+    .price {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid #2a2a2a;
+      font-size: 20px;
+    }
+
+    .cta {
+      padding: 100px 7%;
+      text-align: center;
+      background: #eee;
+      color: #111;
+    }
+
+    .cta h2 {
+      max-width: 900px;
+      margin: 0 auto 35px;
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 1;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 25px;
+      background: #111;
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    footer {
+      padding: 35px 7%;
+      color: #777;
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav a:not(:last-child) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .navbar img {
+        width: 190px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 90px 7%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
+  <nav class="navbar">
+    <a href="/">
+      <img
+        src="assets/logo.png"
+        alt="Karakılıç Otomotiv Giresun"
+      >
+    </a>
 
-        <a href="index.html" class="brand">
-            KARAKILIÇ
-            <span>OTOMOTİV & İNŞAAT</span>
-        </a>
+    <div class="nav">
+      <a href="/otomotiv.html">Otomotiv</a>
+      <a href="/insaat.html">İnşaat</a>
+      <a href="/kiralik-is-makinesi.html">İş Makinesi</a>
+      <a href="/#iletisim">İletişim</a>
+    </div>
+  </nav>
 
-        <div class="nav-links">
-            <a href="#araclar">Araçlarımız</a>
-            <a href="#hakkimizda">Hakkımızda</a>
-            <a href="#iletisim">İletişim</a>
+  <main>
 
-            <a href="insaat.html" class="switch-business">
-                İNŞAAT →
-            </a>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="label">
+          KARAKILIÇ OTOMOTİV · GİRESUN
         </div>
 
-    </nav>
-
-
-    <!-- HERO -->
-    <section class="automotive-hero-page">
-
-        <div class="automotive-hero-overlay"></div>
-
-        <div class="automotive-hero-content">
-
-            <span class="small-title">
-                KARAKILIÇ OTOMOTİV
-            </span>
-
-            <h1>
-                The safest place<br>
-                to buy a used car.
-            </h1>
-
-            <p>
-                Güvenilir, şeffaf ve özenle seçilmiş ikinci el araçlar.
-            </p>
-
-            <a href="#araclar" class="main-button">
-                ARAÇLARI İNCELE
-                <span>→</span>
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- HAKKIMIZDA -->
-    <section class="about-section" id="hakkimizda">
-
-        <div class="about-left">
-
-            <span class="small-title">
-                KARAKILIÇ OTOMOTİV
-            </span>
-
-            <h2>
-                Güvenle<br>
-                yola çıkın.
-            </h2>
-
-        </div>
-
-        <div class="about-right">
-
-            <p>
-                Karakılıç Otomotiv, ikinci el araç alım ve satımında
-                güvenilir ve şeffaf hizmet anlayışıyla müşterilerine
-                kaliteli araç seçenekleri sunar.
-            </p>
-
-            <p>
-                Araç seçiminden satış sürecine kadar müşterilerimize
-                hızlı, açık ve profesyonel bir deneyim sunmayı hedefliyoruz.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- ARAÇLAR -->
-    <section class="cars-section" id="araclar">
-
-        <div class="section-top">
-
-            <div>
-                <span class="small-title">
-                    ARAÇLARIMIZ
-                </span>
-
-                <h2>
-                    Öne Çıkan Araçlar
-                </h2>
-            </div>
-
-        </div>
-
-
-        <div class="cars-grid">
-
-
-            <!-- ARAÇ 1 -->
-            <article class="car-card">
-
-                <div class="car-image">
-                    <img src="assets/automotive.jpg" alt="Satılık araç">
-                </div>
-
-                <div class="car-info">
-
-                    <div class="car-top">
-                        <span>2022</span>
-                        <span>48.000 KM</span>
-                    </div>
-
-                    <h3>
-                        Mercedes-Benz C200
-                    </h3>
-
-                    <div class="car-specs">
-                        <span>Otomatik</span>
-                        <span>Benzin</span>
-                        <span>2022</span>
-                    </div>
-
-                    <div class="car-bottom">
-
-                        <strong>
-                            ₺2.450.000
-                        </strong>
-
-                        <a href="#">
-                            DETAYLAR →
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- ARAÇ 2 -->
-            <article class="car-card">
-
-                <div class="car-image">
-                    <img src="assets/automotive.jpg" alt="Satılık araç">
-                </div>
-
-                <div class="car-info">
-
-                    <div class="car-top">
-                        <span>2021</span>
-                        <span>62.000 KM</span>
-                    </div>
-
-                    <h3>
-                        BMW 320i
-                    </h3>
-
-                    <div class="car-specs">
-                        <span>Otomatik</span>
-                        <span>Benzin</span>
-                        <span>2021</span>
-                    </div>
-
-                    <div class="car-bottom">
-
-                        <strong>
-                            ₺2.150.000
-                        </strong>
-
-                        <a href="#">
-                            DETAYLAR →
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- ARAÇ 3 -->
-            <article class="car-card">
-
-                <div class="car-image">
-                    <img src="assets/automotive.jpg" alt="Satılık araç">
-                </div>
-
-                <div class="car-info">
-
-                    <div class="car-top">
-                        <span>2023</span>
-                        <span>31.000 KM</span>
-                    </div>
-
-                    <h3>
-                        Audi A4
-                    </h3>
-
-                    <div class="car-specs">
-                        <span>Otomatik</span>
-                        <span>Benzin</span>
-                        <span>2023</span>
-                    </div>
-
-                    <div class="car-bottom">
-
-                        <strong>
-                            ₺2.650.000
-                        </strong>
-
-                        <a href="#">
-                            DETAYLAR →
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </section>
-
-
-    <!-- İLETİŞİM -->
-    <section class="automotive-contact" id="iletisim">
-
-        <div class="contact-intro">
-
-            <span class="small-title">
-                İLETİŞİM
-            </span>
-
-            <h2>
-                Doğrudan<br>
-                bize ulaşın.
-            </h2>
-
-            <p>
-                Araçlarımız hakkında bilgi almak veya araç alım-satım
-                talepleriniz için ilgili yetkilimizle iletişime geçebilirsiniz.
-            </p>
-
-        </div>
-
-
-        <div class="people-list">
-
-            <!-- KİŞİ 1 -->
-            <div class="person-card">
-
-                <div class="person-role">
-                    OTOMOTİV YETKİLİSİ
-                </div>
-
-                <h3>
-                    İsim Soyisim
-                </h3>
-
-                <a href="tel:+905000000000">
-                    +90 500 000 00 00
-                </a>
-
-                <a href="https://wa.me/905000000000" target="_blank">
-                    WhatsApp →
-                </a>
-
-            </div>
-
-
-            <!-- KİŞİ 2 -->
-            <div class="person-card">
-
-                <div class="person-role">
-                    SATIŞ
-                </div>
-
-                <h3>
-                    İsim Soyisim
-                </h3>
-
-                <a href="tel:+905000000000">
-                    +90 500 000 00 00
-                </a>
-
-                <a href="mailto:info@karakilic.com.tr">
-                    info@karakilic.com.tr
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-
-        <div class="footer-logo">
-
-            KARAKILIÇ
-
-            <span>
-                OTOMOTİV & İNŞAAT
-            </span>
-
-        </div>
-
-        <div class="footer-links">
-            <a href="index.html">Ana Sayfa</a>
-            <a href="insaat.html">İnşaat</a>
-        </div>
+        <h1>
+          Giresun Otomotiv
+        </h1>
 
         <p>
-            © 2026 Karakılıç
+          Karakılıç Otomotiv; Giresun'da ikinci el araç satışı,
+          güncel araç portföyü ve güvenilir araç ticareti alanında
+          müşterilerine profesyonel hizmet sunmaktadır.
+        </p>
+      </div>
+    </section>
+
+
+    <section class="intro">
+      <div class="intro-inner">
+
+        <div class="label">
+          GİRESUN İKİNCİ EL ARAÇ
+        </div>
+
+        <h2>
+          Güvenilir ikinci el araçlar ve güncel otomotiv portföyü
+        </h2>
+
+        <p>
+          2006 yılından bu yana Giresun otomotiv sektöründe faaliyet
+          gösteren Karakılıç Otomotiv, farklı marka ve modellerden
+          oluşan güncel araç portföyüyle hizmet vermektedir.
         </p>
 
-    </footer>
+        <p>
+          Araçlarımızın güncel fiyat, ilan ve detay bilgilerine
+          Sahibinden mağazamız üzerinden ulaşabilirsiniz.
+        </p>
+
+      </div>
+    </section>
+
+
+    <section class="vehicles">
+
+      <div class="vehicles-head">
+        <div class="label">
+          KARAKILIÇ OTOMOTİV
+        </div>
+
+        <h2>
+          Güncel Araçlar
+        </h2>
+      </div>
+
+
+      <div class="grid">
+
+        <article class="card">
+          <img
+            src="assets/vehicles/skoda-scala.jpg"
+            alt="Skoda Scala Karakılıç Otomotiv Giresun"
+          >
+
+          <div class="content">
+            <div class="brand">ŠKODA</div>
+            <h3>Scala 1.0 TSI Elite 110 HP DSG</h3>
+            <div class="price">1.549.000 TL</div>
+          </div>
+        </article>
+
+
+        <article class="card">
+          <img
+            src="assets/vehicles/dacia-duster.jpg"
+            alt="Dacia Duster Karakılıç Otomotiv Giresun"
+          >
+
+          <div class="content">
+            <div class="brand">DACIA</div>
+            <h3>Duster Laureate 4x4</h3>
+            <div class="price">990.000 TL</div>
+          </div>
+        </article>
+
+
+        <article class="card">
+          <img
+            src="assets/vehicles/vw-amarok.jpg"
+            alt="Volkswagen Amarok Karakılıç Otomotiv Giresun"
+          >
+
+          <div class="content">
+            <div class="brand">VOLKSWAGEN</div>
+            <h3>Amarok 2.0 TDI Style Plus 4x4</h3>
+            <div class="price">2.440.000 TL</div>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <section class="cta">
+
+      <h2>
+        Karakılıç Otomotiv'in tüm güncel araçlarını inceleyin
+      </h2>
+
+      <a
+        href="https://karakilicoto.sahibinden.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button"
+      >
+        Sahibinden Mağazası
+      </a>
+
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Karakılıç Otomotiv · Giresun
+  </footer>
 
 </body>
 </html>
