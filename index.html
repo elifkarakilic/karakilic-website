@@ -3714,6 +3714,20 @@
 
 
 
+<style>
+/* Vehicle photography: preserve the whole vehicle and a consistent frame. */
+.vehicle-image { height: auto; aspect-ratio: 4 / 3; background: radial-gradient(ellipse at center, #282828 0%, #111 80%); }
+.vehicle-image img { display: block; object-fit: contain; object-position: center; padding: 10px; cursor: zoom-in; }
+.vehicle-card:hover .vehicle-image img { transform: scale(1.015); }
+.vehicle-card { border-radius: 12px; }
+.vehicle-meta { line-height: 1.65; }
+.vehicle-photo-dialog { width: min(1100px, 94vw); max-height: 94vh; padding: 52px 16px 18px; border: 1px solid #484848; border-radius: 14px; background: #111; color: #fff; }
+.vehicle-photo-dialog::backdrop { background: rgba(0,0,0,.88); }
+.vehicle-photo-dialog img { display: block; width: 100%; height: min(70vh, 720px); object-fit: contain; }
+.vehicle-photo-dialog p { padding: 14px 8px 0; font: 14px/1.6 Arial, sans-serif; }
+.vehicle-photo-close { position: absolute; right: 16px; top: 10px; width: 36px; height: 36px; color: white; background: #292929; border: 1px solid #555; border-radius: 50%; font-size: 24px; cursor: pointer; }
+@media (max-width: 700px) { .vehicle-image { height: auto; } }
+</style>
 </head>
 
 
@@ -5970,288 +5984,259 @@
 
 
     const vehicles = [
-
-
-
       {
-
-        year: "2024",
-
-        brand: "ŠKODA",
-
-        model: "Scala 1.0 TSI Elite 110 HP DSG",
-
-        meta: ["Füme", "06 Ağustos 2026"],
-
-        price: "1.549.000 TL",
-
-        image: "assets/vehicles/skoda-scala.jpg"
-
+            "year": "2025",
+            "brand": "PEUGEOT",
+            "model": "Boxer 2.2 BlueHDi (15 m³)",
+            "meta": [
+                  "6.001 KM",
+                  "Dizel",
+                  "Manuel",
+                  "Beyaz",
+                  "08 Ekim 2026"
+            ],
+            "price": "1.590.000 TL",
+            "image": "assets/vehicles/peugeot-boxer.jpg"
       },
-
-
-
       {
-
-        year: "DUSTER",
-
-        brand: "DACIA",
-
-        model: "Duster Laureate 4x4",
-
-        meta: [
-
-          "52.000 KM",
-
-          "Kahverengi",
-
-          "06 Ağustos 2026"
-
-        ],
-
-        price: "990.000 TL",
-
-        image: "assets/vehicles/dacia-duster.jpg"
-
+            "year": "2004",
+            "brand": "SUBARU",
+            "model": "Forester 2.0 XT 4x4",
+            "meta": [
+                  "515.000 KM",
+                  "Benzin (LPG)",
+                  "Otomatik",
+                  "Siyah",
+                  "05 Ekim 2026"
+            ],
+            "price": "620.000 TL",
+            "image": "assets/vehicles/subaru-forester.jpg"
       },
-
-
-
       {
-
-        year: "2020",
-
-        brand: "OPEL",
-
-        model: "Corsa 1.2 Edition",
-
-        meta: ["Füme", "31 Temmuz 2026"],
-
-        price: "925.000 TL",
-
-        image: "assets/vehicles/opel-corsa.jpg"
-
+            "year": "2025",
+            "brand": "FORD",
+            "model": "Transit 2.0 EcoBlue 350 ED",
+            "meta": [
+                  "9.500 KM",
+                  "Dizel",
+                  "Manuel",
+                  "Beyaz",
+                  "05 Ekim 2026"
+            ],
+            "price": "1.900.000 TL",
+            "image": "assets/vehicles/ford-transit.jpg"
       },
-
-
-
       {
-
-        year: "2022",
-
-        brand: "BMW",
-
-        model: "530i xDrive M Sport",
-
-        meta: ["Mavi", "31 Temmuz 2026"],
-
-        price: "4.895.000 TL",
-
-        image: "assets/vehicles/bmw-530i.jpg"
-
+            "year": "2007",
+            "brand": "HINO",
+            "model": "26.260 Damperli",
+            "meta": [
+                  "350.000 KM",
+                  "Dizel",
+                  "Manuel",
+                  "Sarı",
+                  "04 Ekim 2026"
+            ],
+            "price": "1.350.000 TL",
+            "image": "assets/vehicles/hino-26260.jpg"
       },
-
-
-
       {
-
-        year: "2025",
-
-        brand: "DACIA",
-
-        model: "Stepway Expression",
-
-        meta: ["Yeşil", "31 Temmuz 2026"],
-
-        price: "1.325.000 TL",
-
-        image: "assets/vehicles/dacia-stepway.jpg"
-
+            "year": "2014",
+            "brand": "VOLKSWAGEN",
+            "model": "Tiguan 1.4 TSI Sport&Style 122 HP",
+            "meta": [
+                  "161.000 KM",
+                  "Benzin",
+                  "Manuel",
+                  "Siyah",
+                  "03 Ekim 2026"
+            ],
+            "price": "1.235.000 TL",
+            "image": "assets/vehicles/vw-tiguan.jpg"
       },
-
-
-
       {
-
-        year: "2019",
-
-        brand: "HYUNDAI",
-
-        model: "Kona 1.6 CRDi Elite",
-
-        meta: ["Kırmızı", "31 Temmuz 2026"],
-
-        price: "1.195.000 TL",
-
-        image: "assets/vehicles/hyundai-kona.jpg"
-
+            "year": "2017",
+            "brand": "ŠKODA",
+            "model": "Octavia 1.0 TSI Style 115 HP DSG",
+            "meta": [
+                  "113.500 KM",
+                  "Benzin",
+                  "Otomatik",
+                  "Gri",
+                  "30 Eylül 2026"
+            ],
+            "price": "1.249.000 TL",
+            "image": "assets/vehicles/skoda-octavia.jpg"
       },
-
-
-
       {
-
-        year: "2017",
-
-        brand: "RANGE ROVER",
-
-        model: "3.0 TDV6 Autobiography",
-
-        meta: ["Gri", "30 Temmuz 2026"],
-
-        price: "8.800.000 TL",
-
-        image: "assets/vehicles/range-rover.jpg"
-
+            "year": "2022",
+            "brand": "BMW",
+            "model": "530i xDrive M Sport",
+            "meta": [
+                  "90.000 KM",
+                  "Benzin (Hafif Hibrit)",
+                  "Otomatik",
+                  "Mavi",
+                  "29 Eylül 2026"
+            ],
+            "price": "4.895.000 TL",
+            "image": "assets/vehicles/bmw-530i.jpg"
       },
-
-
-
       {
-
-        year: "2025",
-
-        brand: "PEUGEOT",
-
-        model: "408 Allure",
-
-        meta: ["Beyaz", "27 Temmuz 2026"],
-
-        price: "1.895.000 TL",
-
-        image: "assets/vehicles/peugeot-408.jpg"
-
+            "year": "2022",
+            "brand": "FIAT",
+            "model": "Fiorino Combi 1.3 Multijet Premio 95 HP",
+            "meta": [
+                  "39.500 KM",
+                  "Dizel",
+                  "Manuel",
+                  "Kırmızı",
+                  "28 Eylül 2026"
+            ],
+            "price": "899.000 TL",
+            "image": "assets/vehicles/fiat-fiorino.jpg"
       },
-
-
-
       {
-
-        year: "2023",
-
-        brand: "CITROËN",
-
-        model: "Berlingo 1.5 BlueHDi",
-
-        meta: ["Beyaz", "25 Temmuz 2026"],
-
-        price: "695.000 TL",
-
-        image: "assets/vehicles/citroen-berlingo.jpg"
-
+            "year": "2023",
+            "brand": "CITROËN",
+            "model": "Berlingo 1.5 BlueHDi",
+            "meta": [
+                  "98.000 KM",
+                  "Dizel",
+                  "Manuel",
+                  "Beyaz",
+                  "27 Eylül 2026"
+            ],
+            "price": "699.000 TL",
+            "image": "assets/vehicles/citroen-berlingo.jpg"
       },
-
-
-
       {
-
-        year: "2018",
-
-        brand: "AUDI",
-
-        model: "Q8 50 TDI Quattro",
-
-        meta: ["Mavi", "22 Temmuz 2026"],
-
-        price: "7.350.000 TL",
-
-        image: "assets/vehicles/audi-q8.jpg"
-
+            "year": "2022",
+            "brand": "VOLVO",
+            "model": "XC90 2.0 D B5 Plus Bright",
+            "meta": [
+                  "42.500 KM",
+                  "Dizel (Hafif Hibrit)",
+                  "Otomatik",
+                  "Mavi",
+                  "27 Eylül 2026"
+            ],
+            "price": "5.425.000 TL",
+            "image": "assets/vehicles/volvo-xc90.jpg"
       },
-
-
-
       {
-
-        year: "2025",
-
-        brand: "TOGG",
-
-        model: "T10F V2 Uzun Menzil",
-
-        meta: ["Mavi", "21 Temmuz 2026"],
-
-        price: "2.450.000 TL",
-
-        image: "assets/vehicles/togg-t10f.jpg"
-
+            "year": "2016",
+            "brand": "FORD",
+            "model": "Transit 350 L Yüksek Tavan",
+            "meta": [
+                  "226.000 KM",
+                  "Dizel",
+                  "Manuel",
+                  "Beyaz",
+                  "28 Eylül 2026"
+            ],
+            "price": "690.000 TL",
+            "image": "assets/vehicles/ford-transit-2016.jpg"
       },
-
-
-
       {
-
-        year: "2026",
-
-        brand: "PEUGEOT",
-
-        model: "2008",
-
-        meta: ["Gri", "21 Temmuz 2026"],
-
-        price: "1.895.000 TL",
-
-        image: "assets/vehicles/peugeot-2008.jpg"
-
+            "year": "2024",
+            "brand": "FORD",
+            "model": "Focus 1.5 EcoBlue Titanium Stil 115 HP",
+            "meta": [
+                  "11.500 KM",
+                  "Dizel",
+                  "Otomatik",
+                  "Gri",
+                  "26 Eylül 2026"
+            ],
+            "price": "1.795.000 TL",
+            "image": "assets/vehicles/ford-focus.jpg"
       },
-
-
-
       {
-
-        year: "2025",
-
-        brand: "PEUGEOT",
-
-        model: "e-208 GT",
-
-        meta: ["Gri", "20 Temmuz 2026"],
-
-        price: "1.499.000 TL",
-
-        image: "assets/vehicles/peugeot-e208.jpg"
-
+            "year": "2015",
+            "brand": "OPEL",
+            "model": "Insignia 1.6 CDTI Edition Elegance 136 HP",
+            "meta": [
+                  "146.000 KM",
+                  "Dizel",
+                  "Otomatik",
+                  "Beyaz",
+                  "25 Eylül 2026"
+            ],
+            "price": "1.225.000 TL",
+            "image": "assets/vehicles/opel-insignia.jpg"
       },
-
-
-
       {
-
-        year: "2023",
-
-        brand: "VOLKSWAGEN",
-
-        model: "Amarok 2.0 TDI Style Plus 4x4",
-
-        meta: ["Mavi", "17 Temmuz 2026"],
-
-        price: "2.440.000 TL",
-
-        image: "assets/vehicles/vw-amarok.jpg"
-
+            "year": "2023",
+            "brand": "MERCEDES-BENZ",
+            "model": "GLC 180 AMG",
+            "meta": [
+                  "42.000 KM",
+                  "Benzin (Hafif Hibrit)",
+                  "Otomatik",
+                  "Siyah",
+                  "23 Eylül 2026"
+            ],
+            "price": "4.575.000 TL",
+            "image": "assets/vehicles/mercedes-glc180.jpg"
       },
-
-
-
       {
-
-        year: "2003",
-
-        brand: "LAND ROVER",
-
-        model: "Discovery 2.5 TD5 · 7 Kişilik",
-
-        meta: ["Gri", "17 Temmuz 2026"],
-
-        price: "1.040.000 TL",
-
-        image: "assets/vehicles/land-rover-discovery.jpg"
-
+            "year": "2015",
+            "brand": "MERCEDES-BENZ",
+            "model": "A 180 d AMG",
+            "meta": [
+                  "157.000 KM",
+                  "Dizel",
+                  "Otomatik",
+                  "Beyaz",
+                  "23 Eylül 2026"
+            ],
+            "price": "1.675.000 TL",
+            "image": "assets/vehicles/mercedes-a180d.jpg"
+      },
+      {
+            "year": "2016",
+            "brand": "MERCEDES-BENZ",
+            "model": "C 200 d AMG 1.6 136 HP 7G-Tronic",
+            "meta": [
+                  "227.000 KM",
+                  "Dizel",
+                  "Otomatik",
+                  "Mavi",
+                  "23 Eylül 2026"
+            ],
+            "price": "1.890.000 TL",
+            "image": "assets/vehicles/mercedes-c200d.jpg"
+      },
+      {
+            "year": "2018",
+            "brand": "AUDI",
+            "model": "Q8 50 TDI Quattro",
+            "meta": [
+                  "105.000 KM",
+                  "Dizel (Hafif Hibrit)",
+                  "Otomatik",
+                  "Mavi",
+                  "22 Eylül 2026"
+            ],
+            "price": "7.350.000 TL",
+            "image": "assets/vehicles/audi-q8.jpg"
+      },
+      {
+            "year": "2017",
+            "brand": "RENAULT",
+            "model": "Megane 1.5 dCi Joy 90 HP",
+            "meta": [
+                  "250.000 KM",
+                  "Dizel",
+                  "Manuel",
+                  "Beyaz",
+                  "19 Eylül 2026"
+            ],
+            "price": "890.000 TL",
+            "image": "assets/vehicles/renault-megane.jpg"
       }
-
-
-
-    ];
+];
 
 
 
@@ -7116,6 +7101,29 @@
 
 
 
+
+
+<script>
+(function () {
+  const dialog = document.createElement('dialog');
+  dialog.className = 'vehicle-photo-dialog';
+  dialog.setAttribute('aria-label', 'Araç fotoğrafı');
+  dialog.innerHTML = '<button class="vehicle-photo-close" type="button" aria-label="Kapat">×</button><img alt=""><p></p>';
+  document.body.appendChild(dialog);
+  const photo = dialog.querySelector('img');
+  const caption = dialog.querySelector('p');
+  dialog.querySelector('button').addEventListener('click', function () { dialog.close(); });
+  dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); });
+  document.querySelectorAll('.vehicle-image img, .vehicles .card img').forEach(function (img) {
+    img.tabIndex = 0;
+    img.setAttribute('role', 'button');
+    img.setAttribute('aria-label', img.alt + ' — fotoğrafı büyüt');
+    function openPhoto() { photo.src = img.currentSrc || img.src; photo.alt = img.alt; caption.textContent = img.alt; dialog.showModal(); }
+    img.addEventListener('click', openPhoto);
+    img.addEventListener('keydown', function (event) { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openPhoto(); } });
+  });
+})();
+</script>
 
 </body>
 
