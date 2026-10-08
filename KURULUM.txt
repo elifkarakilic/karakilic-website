@@ -1,0 +1,11 @@
+8 EKİM 2026 — YALNIZCA 18 GÜNCEL ARAÇ
+Kullanıcının doğruladığı 18 aktif ilan listelenir. Güncel listede bulunmayan 12 araç iki sayfadan da kaldırıldı.
+Tüm site kodları ve görseller dahildir. Fotoğraf büyütme özelliği korunmuştur.
+
+Karakilic klasörünün içeriğini mevcut proje klasörüne kopyalayın. Aynı adlı dosyaları değiştirin. Mevcut .git klasörünü koruyun.
+
+git add .
+git commit -m "Keep only 18 current vehicle listings"
+git push origin main
+
+Henüz canlıya yayınlanmadı.

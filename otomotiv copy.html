@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Giresun Otomotiv | İkinci El Araç - Karakılıç Otomotiv</title>
+
+  <meta
+    name="description"
+    content="Karakılıç Otomotiv Giresun'da ikinci el araç satışı, güncel araç portföyü ve güvenilir otomotiv hizmetleri sunar. Güncel araçlarımızı inceleyin."
+  >
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link
+    rel="canonical"
+    href="https://www.karakilic.tr/otomotiv.html"
+  >
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoDealer",
+    "name": "Karakılıç Otomotiv",
+    "url": "https://www.karakilic.tr/otomotiv.html",
+    "logo": "https://www.karakilic.tr/assets/logo.png",
+    "description": "Giresun'da ikinci el araç satışı ve otomotiv hizmetleri.",
+    "telephone": "+90 533 423 17 23",
+    "email": "info@karakilic.tr",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Gedikkaya Mah. Gazi Mustafa Kemal Blv. Serhat Apt. No:188 A",
+      "addressLocality": "Giresun",
+      "addressCountry": "TR"
+    }
+  }
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #fff;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .navbar {
+      height: 100px;
+      padding: 0 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #080808;
+      border-bottom: 1px solid #222;
+    }
+
+    .navbar img {
+      width: 300px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+      font-size: 12px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .nav a:hover {
+      opacity: .65;
+    }
+
+    .hero {
+      min-height: 620px;
+      padding: 120px 7%;
+      display: flex;
+      align-items: flex-end;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0,0,0,.1),
+          rgba(0,0,0,.9)
+        ),
+        url("assets/automotive.jpg") center/cover;
+    }
+
+    .hero-inner {
+      max-width: 850px;
+    }
+
+    .label {
+      margin-bottom: 18px;
+      color: #aaa;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin-bottom: 25px;
+      font-size: clamp(48px, 7vw, 92px);
+      line-height: .95;
+      letter-spacing: -3px;
+      text-transform: uppercase;
+    }
+
+    .hero p {
+      max-width: 700px;
+      color: #d0d0d0;
+      font-size: 18px;
+    }
+
+    .intro {
+      padding: 110px 7%;
+      background: #0c0c0c;
+    }
+
+    .intro-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .intro h2 {
+      max-width: 850px;
+      margin-bottom: 35px;
+      font-size: clamp(34px, 4vw, 56px);
+      line-height: 1.05;
+    }
+
+    .intro p {
+      max-width: 900px;
+      margin-bottom: 20px;
+      color: #aaa;
+      font-size: 17px;
+    }
+
+    .vehicles {
+      padding: 110px 6%;
+    }
+
+    .vehicles-head {
+      max-width: 1400px;
+      margin: 0 auto 55px;
+    }
+
+    .vehicles-head h2 {
+      font-size: clamp(38px, 5vw, 66px);
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .grid {
+      max-width: 1400px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid #222;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .content {
+      padding: 24px;
+    }
+
+    .brand {
+      margin-bottom: 7px;
+      color: #777;
+      font-size: 10px;
+      letter-spacing: 3px;
+    }
+
+    .content h3 {
+      min-height: 56px;
+      font-size: 19px;
+      font-weight: 500;
+    }
+
+    .price {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid #2a2a2a;
+      font-size: 20px;
+    }
+
+    .cta {
+      padding: 100px 7%;
+      text-align: center;
+      background: #eee;
+      color: #111;
+    }
+
+    .cta h2 {
+      max-width: 900px;
+      margin: 0 auto 35px;
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 1;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 25px;
+      background: #111;
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    footer {
+      padding: 35px 7%;
+      color: #777;
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav a:not(:last-child) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .navbar img {
+        width: 190px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 90px 7%;
+      }
+    }
+  </style>
+<style>
+/* Vehicle photography: preserve the whole vehicle and a consistent frame. */
+.vehicle-image { height: auto; aspect-ratio: 4 / 3; background: radial-gradient(ellipse at center, #282828 0%, #111 80%); }
+.vehicle-image img { display: block; object-fit: contain; object-position: center; padding: 10px; cursor: zoom-in; }
+.vehicle-card:hover .vehicle-image img { transform: scale(1.015); }
+.vehicle-card { border-radius: 12px; }
+.vehicle-meta { line-height: 1.65; }
+.vehicle-photo-dialog { width: min(1100px, 94vw); max-height: 94vh; padding: 52px 16px 18px; border: 1px solid #484848; border-radius: 14px; background: #111; color: #fff; }
+.vehicle-photo-dialog::backdrop { background: rgba(0,0,0,.88); }
+.vehicle-photo-dialog img { display: block; width: 100%; height: min(70vh, 720px); object-fit: contain; }
+.vehicle-photo-dialog p { padding: 14px 8px 0; font: 14px/1.6 Arial, sans-serif; }
+.vehicle-photo-close { position: absolute; right: 16px; top: 10px; width: 36px; height: 36px; color: white; background: #292929; border: 1px solid #555; border-radius: 50%; font-size: 24px; cursor: pointer; }
+@media (max-width: 700px) { .vehicle-image { height: auto; } }
+
+.vehicles .card { border-radius: 12px; }
+.vehicles .card img { display: block; height: auto; aspect-ratio: 4 / 3; object-fit: contain; padding: 10px; background: radial-gradient(ellipse at center, #282828 0%, #111 80%); cursor: zoom-in; transition: transform .35s; }
+.vehicles .card:hover img { transform: scale(1.015); }
+.vehicles .content p { color: #aaa; font-size: 12px; line-height: 1.7; margin: 12px 0; }
+</style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="/">
+      <img
+        src="assets/logo.png"
+        alt="Karakılıç Otomotiv Giresun"
+      >
+    </a>
+
+    <div class="nav">
+      <a href="/otomotiv.html">Otomotiv</a>
+      <a href="/insaat.html">İnşaat</a>
+      <a href="/kiralik-is-makinesi.html">İş Makinesi</a>
+      <a href="/#iletisim">İletişim</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="label">
+          KARAKILIÇ OTOMOTİV · GİRESUN
+        </div>
+
+        <h1>
+          Giresun Otomotiv
+        </h1>
+
+        <p>
+          Karakılıç Otomotiv; Giresun'da ikinci el araç satışı,
+          güncel araç portföyü ve güvenilir araç ticareti alanında
+          müşterilerine profesyonel hizmet sunmaktadır.
+        </p>
+      </div>
+    </section>
+
+
+    <section class="intro">
+      <div class="intro-inner">
+
+        <div class="label">
+          GİRESUN İKİNCİ EL ARAÇ
+        </div>
+
+        <h2>
+          Güvenilir ikinci el araçlar ve güncel otomotiv portföyü
+        </h2>
+
+        <p>
+          2006 yılından bu yana Giresun otomotiv sektöründe faaliyet
+          gösteren Karakılıç Otomotiv, farklı marka ve modellerden
+          oluşan güncel araç portföyüyle hizmet vermektedir.
+        </p>
+
+        <p>
+          Araçlarımızın güncel fiyat, ilan ve detay bilgilerine
+          Sahibinden mağazamız üzerinden ulaşabilirsiniz.
+        </p>
+
+      </div>
+    </section>
+
+
+    <section class="vehicles">
+
+      <div class="vehicles-head">
+        <div class="label">
+          KARAKILIÇ OTOMOTİV
+        </div>
+
+        <h2>
+          Güncel Araçlar
+        </h2>
+      </div>
+
+
+      <div class="grid">
+        <article class="card">
+          <img src="assets/vehicles/peugeot-boxer.jpg" alt="2025 PEUGEOT Boxer 2.2 BlueHDi (15 m³) Karakılıç Otomotiv Giresun" loading="lazy">
+          <div class="content">
+            <div class="brand">PEUGEOT</div>
+            <h3>2025 Boxer 2.2 BlueHDi (15 m³)</h3>
+            <p>6.001 KM · Dizel · Manuel</p>
+            <div class="price">1.590.000 TL</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/vehicles/subaru-forester.jpg" alt="2004 SUBARU Forester 2.0 XT 4x4 Karakılıç Otomotiv Giresun" loading="lazy">
+          <div class="content">
+            <div class="brand">SUBARU</div>
+            <h3>2004 Forester 2.0 XT 4x4</h3>
+            <p>515.000 KM · Benzin (LPG) · Otomatik</p>
+            <div class="price">620.000 TL</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/vehicles/ford-transit.jpg" alt="2025 FORD Transit 2.0 EcoBlue 350 ED Karakılıç Otomotiv Giresun" loading="lazy">
+          <div class="content">
+            <div class="brand">FORD</div>
+            <h3>2025 Transit 2.0 EcoBlue 350 ED</h3>
+            <p>9.500 KM · Dizel · Manuel</p>
+            <div class="price">1.900.000 TL</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/vehicles/hino-26260.jpg" alt="2007 HINO 26.260 Damperli Karakılıç Otomotiv Giresun" loading="lazy">
+          <div class="content">
+            <div class="brand">HINO</div>
+            <h3>2007 26.260 Damperli</h3>
+            <p>350.000 KM · Dizel · Manuel</p>
+            <div class="price">1.350.000 TL</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/vehicles/vw-tiguan.jpg" alt="2014 VOLKSWAGEN Tiguan 1.4 TSI Sport&Style 122 HP Karakılıç Otomotiv Giresun" loading="lazy">
+          <div class="content">
+            <div class="brand">VOLKSWAGEN</div>
+            <h3>2014 Tiguan 1.4 TSI Sport&Style 122 HP</h3>
+            <p>161.000 KM · Benzin · Manuel</p>
+            <div class="price">1.235.000 TL</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/vehicles/skoda-octavia.jpg" alt="2017 ŠKODA Octavia 1.0 TSI Style 115 HP DSG Karakılıç Otomotiv Giresun" loading="lazy">
+          <div class="content">
+            <div class="brand">ŠKODA</div>
+            <h3>2017 Octavia 1.0 TSI Style 115 HP DSG</h3>
+            <p>113.500 KM · Benzin · Otomatik</p>
+            <div class="price">1.249.000 TL</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/vehicles/bmw-530i.jpg" alt="2022 BMW 530i xDrive M Sport Karakılıç Otomotiv Giresun" loading="lazy">
+          <div class="content">
+            <div class="brand">BMW</div>
+            <h3>2022 530i xDrive M Sport</h3>
+            <p>90.000 KM · Benzin (Hafif Hibrit) · Otomatik</p>
+            <div class="price">4.895.000 TL</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/vehicles/fiat-fiorino.jpg" alt="2022 FIAT Fiorino Combi 1.3 Multijet Premio 95 HP Karakılıç Otomotiv Giresun" loading="lazy">
+          <div class="content">
+            <div class="brand">FIAT</div>
+            <h3>2022 Fiorino Combi 1.3 Multijet Premio 95 HP</h3>
+            <p>39.500 KM · Dizel · Manuel</p>
+            <div class="price">899.000 TL</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/vehicles/citroen-berlingo.jpg" alt="2023 CITROËN Berlingo 1.5 BlueHDi Karakılıç Otomotiv Giresun" loading="lazy">
+          <div class="content">
+            <div class="brand">CITROËN</div>
+            <h3>2023 Berlingo 1.5 BlueHDi</h3>
+            <p>98.000 KM · Dizel · Manuel</p>
+            <div class="price">699.000 TL</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/vehicles/volvo-xc90.jpg" alt="2022 VOLVO XC90 2.0 D B5 Plus Bright Karakılıç Otomotiv Giresun" loading="lazy">
+          <div class="content">
+            <div class="brand">VOLVO</div>
+            <h3>2022 XC90 2.0 D B5 Plus Bright</h3>
+            <p>42.500 KM · Dizel (Hafif Hibrit) · Otomatik</p>
+            <div class="price">5.425.000 TL</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/vehicles/ford-transit-2016.jpg" alt="2016 FORD Transit 350 L Yüksek Tavan Karakılıç Otomotiv Giresun" loading="lazy">
+          <div class="content">
+            <div class="brand">FORD</div>
+            <h3>2016 Transit 350 L Yüksek Tavan</h3>
+            <p>226.000 KM · Dizel · Manuel</p>
+            <div class="price">690.000 TL</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/vehicles/ford-focus.jpg" alt="2024 FORD Focus 1.5 EcoBlue Titanium Stil 115 HP Karakılıç Otomotiv Giresun" loading="lazy">
+          <div class="content">
+            <div class="brand">FORD</div>
+            <h3>2024 Focus 1.5 EcoBlue Titanium Stil 115 HP</h3>
+            <p>11.500 KM · Dizel · Otomatik</p>
+            <div class="price">1.795.000 TL</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/vehicles/opel-insignia.jpg" alt="2015 OPEL Insignia 1.6 CDTI Edition Elegance 136 HP Karakılıç Otomotiv Giresun" loading="lazy">
+          <div class="content">
+            <div class="brand">OPEL</div>
+            <h3>2015 Insignia 1.6 CDTI Edition Elegance 136 HP</h3>
+            <p>146.000 KM · Dizel · Otomatik</p>
+            <div class="price">1.225.000 TL</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/vehicles/mercedes-glc180.jpg" alt="2023 MERCEDES-BENZ GLC 180 AMG Karakılıç Otomotiv Giresun" loading="lazy">
+          <div class="content">
+            <div class="brand">MERCEDES-BENZ</div>
+            <h3>2023 GLC 180 AMG</h3>
+            <p>42.000 KM · Benzin (Hafif Hibrit) · Otomatik</p>
+            <div class="price">4.575.000 TL</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/vehicles/mercedes-a180d.jpg" alt="2015 MERCEDES-BENZ A 180 d AMG Karakılıç Otomotiv Giresun" loading="lazy">
+          <div class="content">
+            <div class="brand">MERCEDES-BENZ</div>
+            <h3>2015 A 180 d AMG</h3>
+            <p>157.000 KM · Dizel · Otomatik</p>
+            <div class="price">1.675.000 TL</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/vehicles/mercedes-c200d.jpg" alt="2016 MERCEDES-BENZ C 200 d AMG 1.6 136 HP 7G-Tronic Karakılıç Otomotiv Giresun" loading="lazy">
+          <div class="content">
+            <div class="brand">MERCEDES-BENZ</div>
+            <h3>2016 C 200 d AMG 1.6 136 HP 7G-Tronic</h3>
+            <p>227.000 KM · Dizel · Otomatik</p>
+            <div class="price">1.890.000 TL</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/vehicles/audi-q8.jpg" alt="2018 AUDI Q8 50 TDI Quattro Karakılıç Otomotiv Giresun" loading="lazy">
+          <div class="content">
+            <div class="brand">AUDI</div>
+            <h3>2018 Q8 50 TDI Quattro</h3>
+            <p>105.000 KM · Dizel (Hafif Hibrit) · Otomatik</p>
+            <div class="price">7.350.000 TL</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/vehicles/renault-megane.jpg" alt="2017 RENAULT Megane 1.5 dCi Joy 90 HP Karakılıç Otomotiv Giresun" loading="lazy">
+          <div class="content">
+            <div class="brand">RENAULT</div>
+            <h3>2017 Megane 1.5 dCi Joy 90 HP</h3>
+            <p>250.000 KM · Dizel · Manuel</p>
+            <div class="price">890.000 TL</div>
+          </div>
+        </article>
+      </div>
+
+    </section>
+
+
+    <section class="cta">
+
+      <h2>
+        Karakılıç Otomotiv'in tüm güncel araçlarını inceleyin
+      </h2>
+
+      <a
+        href="https://karakilicoto.sahibinden.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button"
+      >
+        Sahibinden Mağazası
+      </a>
+
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Karakılıç Otomotiv · Giresun
+  </footer>
+
+
+<script>
+(function () {
+  const dialog = document.createElement('dialog');
+  dialog.className = 'vehicle-photo-dialog';
+  dialog.setAttribute('aria-label', 'Araç fotoğrafı');
+  dialog.innerHTML = '<button class="vehicle-photo-close" type="button" aria-label="Kapat">×</button><img alt=""><p></p>';
+  document.body.appendChild(dialog);
+  const photo = dialog.querySelector('img');
+  const caption = dialog.querySelector('p');
+  dialog.querySelector('button').addEventListener('click', function () { dialog.close(); });
+  dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); });
+  document.querySelectorAll('.vehicle-image img, .vehicles .card img').forEach(function (img) {
+    img.tabIndex = 0;
+    img.setAttribute('role', 'button');
+    img.setAttribute('aria-label', img.alt + ' — fotoğrafı büyüt');
+    function openPhoto() { photo.src = img.currentSrc || img.src; photo.alt = img.alt; caption.textContent = img.alt; dialog.showModal(); }
+    img.addEventListener('click', openPhoto);
+    img.addEventListener('keydown', function (event) { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openPhoto(); } });
+  });
+})();
+</script>
+
+</body>
+</html>

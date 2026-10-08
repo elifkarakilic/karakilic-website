@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Giresun İnşaat | Karakılıç İnşaat Projeleri</title>
+
+  <meta
+    name="description"
+    content="Karakılıç İnşaat Giresun'da modern mimari, kaliteli işçilik ve konfor odaklı konut projeleri geliştirir. Gedikkaya, Karakılıç Plaza ve diğer projelerimizi inceleyin."
+  >
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link
+    rel="canonical"
+    href="https://www.karakilic.tr/insaat.html"
+  >
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "name": "Karakılıç İnşaat",
+    "url": "https://www.karakilic.tr/insaat.html",
+    "logo": "https://www.karakilic.tr/assets/logo.png",
+    "description": "Giresun'da modern konut ve inşaat projeleri.",
+    "telephone": "+90 533 423 17 23",
+    "email": "info@karakilic.tr",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Gedikkaya Mah. Gazi Mustafa Kemal Blv. Serhat Apt. No:188 A",
+      "addressLocality": "Giresun",
+      "addressCountry": "TR"
+    }
+  }
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #fff;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .navbar {
+      height: 100px;
+      padding: 0 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #222;
+    }
+
+    .navbar img {
+      width: 300px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 26px;
+      font-size: 12px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      min-height: 650px;
+      padding: 120px 7%;
+      display: flex;
+      align-items: flex-end;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0,0,0,.05),
+          rgba(0,0,0,.9)
+        ),
+        url("assets/karakilicplaza-01.jpg") center/cover;
+    }
+
+    .hero-inner {
+      max-width: 900px;
+    }
+
+    .label {
+      margin-bottom: 18px;
+      color: #aaa;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin-bottom: 25px;
+      font-size: clamp(48px, 7vw, 92px);
+      line-height: .95;
+      letter-spacing: -3px;
+      text-transform: uppercase;
+    }
+
+    .hero p {
+      max-width: 720px;
+      color: #ddd;
+      font-size: 18px;
+    }
+
+    .intro {
+      padding: 110px 7%;
+    }
+
+    .intro-inner {
+      max-width: 1050px;
+    }
+
+    .intro h2 {
+      margin-bottom: 30px;
+      font-size: clamp(34px, 4vw, 56px);
+      line-height: 1.05;
+    }
+
+    .intro p {
+      margin-bottom: 20px;
+      color: #aaa;
+      font-size: 17px;
+    }
+
+    .projects {
+      padding: 80px 6% 130px;
+      background: #0b0b0b;
+    }
+
+    .projects-head {
+      max-width: 1400px;
+      margin: 0 auto 50px;
+    }
+
+    .projects-head h2 {
+      font-size: clamp(38px, 5vw, 65px);
+      text-transform: uppercase;
+    }
+
+    .grid {
+      max-width: 1400px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid #222;
+    }
+
+    .card img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+
+    .content {
+      padding: 25px;
+    }
+
+    .content h3 {
+      margin-bottom: 12px;
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+
+    .content p {
+      color: #999;
+      font-size: 14px;
+    }
+
+    .cta {
+      padding: 100px 7%;
+      background: #eee;
+      color: #111;
+      text-align: center;
+    }
+
+    .cta h2 {
+      max-width: 900px;
+      margin: 0 auto 35px;
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 1;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 25px;
+      background: #111;
+      color: #fff;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+    }
+
+    footer {
+      padding: 35px 7%;
+      color: #777;
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav a:not(:last-child) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .navbar img {
+        width: 190px;
+      }
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+  <nav class="navbar">
+
+    <a href="/">
+      <img
+        src="assets/logo.png"
+        alt="Karakılıç İnşaat Giresun"
+      >
+    </a>
+
+    <div class="nav">
+      <a href="/otomotiv.html">Otomotiv</a>
+      <a href="/insaat.html">İnşaat</a>
+      <a href="/kiralik-is-makinesi.html">İş Makinesi</a>
+      <a href="/#iletisim">İletişim</a>
+    </div>
+
+  </nav>
+
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-inner">
+
+        <div class="label">
+          KARAKILIÇ İNŞAAT · GİRESUN
+        </div>
+
+        <h1>
+          Giresun İnşaat
+        </h1>
+
+        <p>
+          Karakılıç İnşaat, Giresun'da modern mimari,
+          kaliteli işçilik ve güvenilir yapı anlayışıyla
+          prestijli ve konforlu yaşam alanları geliştirir.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="intro">
+
+      <div class="intro-inner">
+
+        <div class="label">
+          KARAKILIÇ İNŞAAT
+        </div>
+
+        <h2>
+          Giresun'a değer katan modern konut projeleri
+        </h2>
+
+        <p>
+          2019 yılından bu yana inşaat sektöründe faaliyetlerini
+          sürdüren Karakılıç İnşaat, Giresun'da estetik,
+          fonksiyonellik ve uzun ömürlü yapı anlayışını bir araya
+          getiren konut projeleri geliştirmektedir.
+        </p>
+
+        <p>
+          Projelerimizde modern mimari, kaliteli malzeme,
+          fonksiyonel planlama ve kullanıcı konforunu ön planda
+          tutuyoruz.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="projects">
+
+      <div class="projects-head">
+
+        <div class="label">
+          GİRESUN İNŞAAT PROJELERİ
+        </div>
+
+        <h2>
+          Projelerimiz
+        </h2>
+
+      </div>
+
+
+      <div class="grid">
+
+
+        <article class="card">
+
+          <img
+            src="assets/gedikkaya-01.jpg"
+            alt="Gedikkaya Karakılıç İnşaat Giresun"
+          >
+
+          <div class="content">
+
+            <h3>
+              Gedikkaya
+            </h3>
+
+            <p>
+              Modern mimari ve işlevsel plan anlayışıyla
+              tasarlanan Giresun konut projesi.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="card">
+
+          <img
+            src="assets/karakilicplaza-01.jpg"
+            alt="Karakılıç Plaza Giresun inşaat"
+          >
+
+          <div class="content">
+
+            <h3>
+              Karakılıç Plaza
+            </h3>
+
+            <p>
+              1+1, 2+1 ve 3+1 daire seçenekleriyle modern
+              şehir yaşamı için tasarlanan proje.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="card">
+
+          <img
+            src="assets/dogan-bey-apt-01.jpg"
+            alt="Doğan Bey Apartmanı Karakılıç İnşaat Giresun"
+          >
+
+          <div class="content">
+
+            <h3>
+              Doğan Bey Apt
+            </h3>
+
+            <p>
+              Konfor ve kaliteli yapı anlayışını bir araya
+              getiren Karakılıç İnşaat projesi.
+            </p>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <section class="cta">
+
+      <h2>
+        Giresun'daki inşaat projelerimiz hakkında bilgi alın
+      </h2>
+
+      <a
+        href="/#iletisim"
+        class="button"
+      >
+        İletişime Geç
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    © 2026 Karakılıç İnşaat · Giresun
+  </footer>
+
+</body>
+
+</html>

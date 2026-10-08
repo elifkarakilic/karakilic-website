@@ -1,0 +1,1657 @@
+/* =========================================================
+   KARAKILIÇ OTOMOTİV & İNŞAAT
+   MAIN STYLESHEET
+========================================================= */
+
+
+/* =========================================================
+   RESET / GENERAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 105px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5.5%;
+
+    background: rgba(5, 5, 5, 0.94);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    z-index: 1000;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.navbar-logo img {
+    width: 330px;
+    height: auto;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+}
+
+.nav-links a {
+    color: #d5d5d5;
+    transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.nav-contact {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 10px 20px;
+}
+
+.nav-contact:hover {
+    border-color: #ffffff;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    height: 100vh;
+    min-height: 720px;
+
+    display: flex;
+
+    padding-top: 105px;
+
+    overflow: hidden;
+}
+
+.hero-panel {
+    position: relative;
+
+    width: 50%;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 70px 7%;
+
+    background-position: center;
+    background-size: cover;
+
+    transition: width 0.55s ease;
+}
+
+.hero-panel:hover {
+    width: 54%;
+}
+
+.hero:hover .hero-panel:not(:hover) {
+    width: 46%;
+}
+
+
+/* AUTOMOTIVE HERO */
+
+.automotive {
+    background-image:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.06) 0%,
+            rgba(0, 0, 0, 0.22) 40%,
+            rgba(0, 0, 0, 0.94) 100%
+        ),
+        url("assets/automotive.jpg");
+}
+
+
+/* CONSTRUCTION HERO */
+
+.construction {
+    background-image:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.05) 0%,
+            rgba(0, 0, 0, 0.22) 42%,
+            rgba(0, 0, 0, 0.94) 100%
+        ),
+        url("assets/karakilicplaza-01.jpg");
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 550px;
+}
+
+.hero-label {
+    margin-bottom: 14px;
+
+    color: #bbbbbb;
+
+    font-size: 11px;
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    margin-bottom: 22px;
+
+    font-size: clamp(44px, 5vw, 76px);
+    line-height: 0.95;
+
+    letter-spacing: -2px;
+
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    max-width: 470px;
+
+    margin-bottom: 30px;
+
+    color: #d0d0d0;
+
+    font-size: 16px;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #ffffff;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition: gap 0.25s ease;
+}
+
+.hero-button:hover {
+    gap: 24px;
+}
+
+
+/* =========================================================
+   GLOBAL SECTION LABEL
+========================================================= */
+
+.section-label {
+    margin-bottom: 25px;
+
+    color: #888888;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.intro {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 135px 8%;
+
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: clamp(32px, 4vw, 58px);
+
+    line-height: 1.15;
+
+    font-weight: 500;
+
+    letter-spacing: -1.5px;
+}
+
+.intro p {
+    max-width: 760px;
+
+    margin: 35px auto 0;
+
+    color: #999999;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   AUTOMOTIVE / VEHICLE STOCK
+========================================================= */
+
+.vehicle-section {
+    padding: 130px 6% 145px;
+
+    background: #0a0a0a;
+}
+
+.vehicle-header {
+    max-width: 1400px;
+
+    margin: 0 auto 65px;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 1fr;
+
+    gap: 80px;
+
+    align-items: end;
+}
+
+.vehicle-header h2 {
+    font-size: clamp(42px, 5vw, 68px);
+
+    line-height: 0.95;
+
+    letter-spacing: -2.5px;
+
+    text-transform: uppercase;
+}
+
+.vehicle-header-right p {
+    max-width: 540px;
+
+    margin-bottom: 25px;
+
+    color: #999999;
+}
+
+.stock-main-button {
+    display: inline-block;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid #ffffff;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.stock-note {
+    margin-top: 14px;
+
+    color: #666666;
+
+    font-size: 12px;
+}
+
+
+/* VEHICLE GRID */
+
+.vehicle-grid {
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.vehicle-card {
+    overflow: hidden;
+
+    background: #111111;
+
+    border: 1px solid #202020;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #444444;
+}
+
+.vehicle-image {
+    position: relative;
+
+    height: 285px;
+
+    overflow: hidden;
+
+    background: #151515;
+}
+
+.vehicle-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.vehicle-card:hover .vehicle-image img {
+    transform: scale(1.04);
+}
+
+.vehicle-year {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    padding: 7px 11px;
+
+    background: rgba(0, 0, 0, 0.78);
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+.vehicle-content {
+    padding: 25px;
+}
+
+.vehicle-brand {
+    margin-bottom: 8px;
+
+    color: #777777;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.vehicle-content h3 {
+    min-height: 58px;
+
+    font-size: 20px;
+
+    line-height: 1.3;
+
+    font-weight: 500;
+}
+
+.vehicle-meta {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px 14px;
+
+    margin: 20px 0 25px;
+
+    color: #888888;
+
+    font-size: 11px;
+
+    letter-spacing: 0.7px;
+
+    text-transform: uppercase;
+}
+
+.vehicle-meta span:not(:last-child)::after {
+    content: " ·";
+
+    margin-left: 10px;
+
+    color: #444444;
+}
+
+.vehicle-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #282828;
+}
+
+.vehicle-bottom strong {
+    font-size: 20px;
+
+    font-weight: 500;
+}
+
+.vehicle-bottom a {
+    color: #aaaaaa;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+
+.vehicle-bottom a:hover {
+    color: #ffffff;
+}
+
+.all-stock {
+    max-width: 1400px;
+
+    margin: 55px auto 0;
+
+    text-align: center;
+}
+
+.all-stock-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 17px 27px;
+
+    border: 1px solid #444444;
+
+    font-size: 12px;
+
+    letter-spacing: 1.6px;
+
+    text-transform: uppercase;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.all-stock-button:hover {
+    background: #ffffff;
+
+    color: #000000;
+}
+
+
+/* =========================================================
+   RENTAL MACHINES
+========================================================= */
+
+.rental-machine-section {
+    padding: 110px 6%;
+
+    background: #0d0d0d;
+
+    border-top: 1px solid #1b1b1b;
+    border-bottom: 1px solid #1b1b1b;
+}
+
+.rental-machine-section .container {
+    width: 100%;
+    max-width: 1150px;
+
+    margin: 0 auto;
+}
+
+.rental-machine-section .section-header {
+    margin-bottom: 45px;
+}
+
+.rental-machine-section .section-header h2 {
+    margin-bottom: 12px;
+
+    color: #ffffff;
+
+    font-size: clamp(34px, 4vw, 52px);
+
+    line-height: 1;
+
+    letter-spacing: -1.5px;
+
+    text-transform: uppercase;
+}
+
+.rental-machine-section .section-header p {
+    max-width: 650px;
+
+    color: #8d8d8d;
+
+    font-size: 15px;
+}
+
+
+/* RENTAL CARD */
+
+.rental-machine-card {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 360px minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 45px;
+
+    padding: 28px;
+
+    background: #131313;
+
+    border: 1px solid #252525;
+}
+
+
+/* IMPORTANT: FIXED DESKTOP IMAGE SIZE */
+
+.rental-machine-image {
+    width: 360px;
+    height: 225px;
+
+    overflow: hidden;
+
+    background: #080808;
+}
+
+.rental-machine-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition: transform 0.5s ease;
+}
+
+.rental-machine-card:hover .rental-machine-image img {
+    transform: scale(1.025);
+}
+
+
+/* RENTAL CONTENT */
+
+.rental-machine-content {
+    min-width: 0;
+
+    padding: 5px 20px 5px 0;
+}
+
+.machine-badge {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    padding: 6px 11px;
+
+    border: 1px solid #555555;
+
+    color: #c8c8c8;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.rental-machine-content h3 {
+    margin-bottom: 14px;
+
+    color: #ffffff;
+
+    font-size: 27px;
+
+    line-height: 1.2;
+
+    font-weight: 600;
+}
+
+.rental-machine-content > p {
+    max-width: 620px;
+
+    margin-bottom: 22px;
+
+    color: #969696;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.machine-features {
+    max-width: 600px;
+
+    margin: 0 0 25px;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+.machine-features li {
+    display: flex;
+
+    gap: 7px;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid #292929;
+
+    color: #bcbcbc;
+
+    font-size: 14px;
+}
+
+.machine-features li strong {
+    color: #ffffff;
+
+    font-weight: 600;
+}
+
+
+/* RENTAL BUTTON */
+
+.machine-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 12px 19px;
+
+    border: 1px solid #555555;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    letter-spacing: 1.3px;
+
+    text-transform: uppercase;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.machine-button:hover {
+    background: #ffffff;
+
+    color: #000000;
+
+    border-color: #ffffff;
+}
+
+
+/* =========================================================
+   CONSTRUCTION INTRO
+========================================================= */
+
+.construction-intro {
+    padding: 130px 8% 60px;
+
+    background: #050505;
+}
+
+.construction-intro-inner {
+    max-width: 1300px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 1fr;
+
+    gap: 80px;
+
+    align-items: end;
+}
+
+.construction-intro h2 {
+    font-size: clamp(42px, 6vw, 80px);
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+
+    text-transform: uppercase;
+}
+
+.construction-intro p {
+    max-width: 550px;
+
+    color: #999999;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.projects {
+    padding: 70px 6% 150px;
+
+    background: #050505;
+}
+
+.projects-header {
+    max-width: 1400px;
+
+    margin: 0 auto 55px;
+}
+
+.projects-header h2 {
+    margin-bottom: 25px;
+
+    font-size: clamp(40px, 6vw, 78px);
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+
+    text-transform: uppercase;
+}
+
+.projects-header p {
+    max-width: 650px;
+
+    color: #999999;
+
+    font-size: 16px;
+}
+
+.project-grid {
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.project-card {
+    position: relative;
+
+    height: 580px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background: #111111;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.7s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.055);
+}
+
+.project-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.03) 20%,
+            rgba(0, 0, 0, 0.92) 100%
+        );
+}
+
+.project-location {
+    margin-bottom: 8px;
+
+    color: #c5c5c5;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+
+    font-size: clamp(25px, 2.3vw, 38px);
+
+    letter-spacing: -1px;
+
+    text-transform: uppercase;
+}
+
+.project-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 15px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+    color: #bbbbbb;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.project-arrow {
+    color: #ffffff;
+
+    font-size: 22px;
+
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-arrow {
+    transform: translateX(8px);
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta {
+    padding: 145px 8%;
+
+    background: #efefed;
+
+    color: #111111;
+
+    text-align: center;
+}
+
+.cta .section-label {
+    color: #777777;
+}
+
+.cta h2 {
+    max-width: 950px;
+
+    margin: 0 auto 45px;
+
+    font-size: clamp(40px, 6vw, 78px);
+
+    line-height: 1;
+
+    letter-spacing: -2.5px;
+}
+
+.cta-button {
+    display: inline-block;
+
+    padding: 17px 32px;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition: background 0.25s ease;
+}
+
+.cta-button:hover {
+    background: #333333;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+    padding: 100px 8%;
+
+    background: #050505;
+}
+
+.contact-grid {
+    max-width: 1300px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 420px 1fr;
+
+    gap: 90px;
+
+    align-items: start;
+}
+
+.contact-company {
+    width: 100%;
+}
+
+.contact-logo img {
+    width: 340px;
+    height: auto;
+
+    margin-bottom: 30px;
+}
+
+.contact-company p {
+    color: #888888;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.contact-email {
+    margin-top: 22px;
+}
+
+.contact-email a {
+    color: #ffffff;
+
+    font-size: 16px;
+
+    transition: opacity 0.2s ease;
+}
+
+.contact-email a:hover {
+    opacity: 0.65;
+}
+
+
+/* CONTACT PEOPLE */
+
+.contact-people-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 80px;
+    row-gap: 55px;
+
+    align-items: start;
+}
+
+.contact-person {
+    min-width: 0;
+}
+
+.contact-person h3 {
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    line-height: 1.3;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+.contact-person .role {
+    margin: 0 0 20px;
+
+    color: #777777;
+
+    font-size: 14px;
+}
+
+.contact-person .phone {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 18px;
+}
+
+.contact-person .phone a {
+    color: #ffffff;
+
+    white-space: nowrap;
+}
+
+.contact-person a:hover {
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 30px 8%;
+
+    background: #050505;
+
+    border-top: 1px solid #1e1e1e;
+
+    color: #666666;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   PROJECT GALLERY MODAL
+========================================================= */
+
+.gallery-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 5000;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.97);
+}
+
+.gallery-modal.active {
+    display: flex;
+}
+
+.gallery-image-container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 100px 100px 85px;
+}
+
+.gallery-image {
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain;
+}
+
+.gallery-close {
+    position: absolute;
+
+    top: 28px;
+    right: 38px;
+
+    z-index: 5100;
+
+    width: 52px;
+    height: 52px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 40px;
+
+    cursor: pointer;
+}
+
+.gallery-prev,
+.gallery-next {
+    position: absolute;
+
+    top: 50%;
+
+    z-index: 5100;
+
+    width: 58px;
+    height: 58px;
+
+    transform: translateY(-50%);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    color: #ffffff;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.gallery-prev:hover,
+.gallery-next:hover {
+    background: #ffffff;
+
+    color: #000000;
+}
+
+.gallery-prev {
+    left: 28px;
+}
+
+.gallery-next {
+    right: 28px;
+}
+
+.gallery-info {
+    position: absolute;
+
+    bottom: 26px;
+    left: 50%;
+
+    z-index: 5100;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+}
+
+.gallery-title {
+    margin-bottom: 4px;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.gallery-counter {
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .navbar-logo img {
+        width: 260px;
+    }
+
+    .nav-links {
+        gap: 20px;
+
+        font-size: 12px;
+    }
+
+    .vehicle-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rental-machine-card {
+        grid-template-columns: 320px minmax(0, 1fr);
+
+        gap: 30px;
+    }
+
+    .rental-machine-image {
+        width: 320px;
+        height: 200px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navbar-logo img {
+        width: 245px;
+    }
+
+    .nav-links a:not(.nav-contact) {
+        display: none;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        height: auto;
+
+        min-height: 0;
+
+        flex-direction: column;
+    }
+
+    .hero-panel {
+        width: 100%;
+
+        height: 70vh;
+
+        min-height: 540px;
+
+        padding: 50px 7%;
+    }
+
+    .hero-panel:hover,
+    .hero:hover .hero-panel:not(:hover) {
+        width: 100%;
+    }
+
+
+    /* VEHICLES */
+
+    .vehicle-header {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    /* RENTAL */
+
+    .rental-machine-card {
+        grid-template-columns: 1fr;
+
+        max-width: 650px;
+
+        margin: auto;
+
+        gap: 25px;
+    }
+
+    .rental-machine-image {
+        width: 100%;
+        height: 320px;
+    }
+
+    .rental-machine-content {
+        padding: 0;
+    }
+
+
+    /* CONSTRUCTION */
+
+    .construction-intro-inner {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    /* PROJECTS */
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        height: 600px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .contact-people-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 45px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    /* GALLERY */
+
+    .gallery-image-container {
+        padding: 90px 25px 100px;
+    }
+
+    .gallery-prev,
+    .gallery-next {
+        width: 46px;
+        height: 46px;
+
+        font-size: 20px;
+    }
+
+    .gallery-prev {
+        left: 12px;
+    }
+
+    .gallery-next {
+        right: 12px;
+    }
+
+    .gallery-close {
+        top: 18px;
+        right: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .vehicle-section {
+        padding: 95px 5%;
+    }
+
+    .vehicle-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vehicle-image {
+        height: 280px;
+    }
+
+    .rental-machine-section {
+        padding: 80px 5%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    /* NAV */
+
+    .navbar {
+        height: 82px;
+
+        padding: 0 5%;
+    }
+
+    .navbar-logo img {
+        width: 190px;
+    }
+
+    .nav-contact {
+        padding: 8px 12px;
+
+        font-size: 10px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding-top: 82px;
+    }
+
+    .hero-panel {
+        min-height: 520px;
+    }
+
+    .hero-content h1 {
+        font-size: 46px;
+    }
+
+
+    /* ABOUT */
+
+    .intro {
+        padding: 90px 7%;
+    }
+
+
+    /* VEHICLES */
+
+    .vehicle-header h2 {
+        font-size: 45px;
+    }
+
+    .vehicle-card {
+        width: 100%;
+    }
+
+
+    /* RENTAL MACHINE */
+
+    .rental-machine-section {
+        padding: 70px 5%;
+    }
+
+    .rental-machine-section .section-header {
+        margin-bottom: 30px;
+    }
+
+    .rental-machine-section .section-header h2 {
+        font-size: 32px;
+    }
+
+    .rental-machine-card {
+        padding: 15px;
+
+        gap: 22px;
+    }
+
+    .rental-machine-image {
+        width: 100%;
+        height: 210px;
+    }
+
+    .rental-machine-content {
+        padding: 5px;
+    }
+
+    .rental-machine-content h3 {
+        font-size: 23px;
+    }
+
+    .machine-features li {
+        display: block;
+    }
+
+    .machine-button {
+        width: 100%;
+    }
+
+
+    /* PROJECTS */
+
+    .projects {
+        padding: 60px 5% 100px;
+    }
+
+    .project-card {
+        height: 500px;
+    }
+
+    .project-overlay {
+        padding: 25px;
+    }
+
+
+    /* CTA */
+
+    .cta {
+        padding: 100px 7%;
+    }
+
+
+    /* CONTACT */
+
+    .contact {
+        padding: 75px 7%;
+    }
+
+    .contact-logo img {
+        width: 250px;
+    }
+
+    .contact-people-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .contact-person h3 {
+        white-space: normal;
+    }
+
+}
