@@ -7118,7 +7118,23 @@
     img.tabIndex = 0;
     img.setAttribute('role', 'button');
     img.setAttribute('aria-label', img.alt + ' — fotoğrafı büyüt');
-    function openPhoto() { photo.src = img.currentSrc || img.src; photo.alt = img.alt; caption.textContent = img.alt; dialog.showModal(); }
+    function openPhoto() {
+      const isGLC = img.getAttribute('src') === 'assets/vehicles/mercedes-glc180.jpg';
+      const images = isGLC ? ["assets/vehicles/glc180-gallery/01.jpg", "assets/vehicles/glc180-gallery/02.jpg", "assets/vehicles/glc180-gallery/03.jpg", "assets/vehicles/glc180-gallery/04.jpg", "assets/vehicles/glc180-gallery/05.jpg", "assets/vehicles/glc180-gallery/06.jpg", "assets/vehicles/glc180-gallery/07.jpg", "assets/vehicles/glc180-gallery/08.jpg", "assets/vehicles/glc180-gallery/09.jpg", "assets/vehicles/glc180-gallery/10.jpg", "assets/vehicles/glc180-gallery/11.jpg", "assets/vehicles/glc180-gallery/12.jpg", "assets/vehicles/glc180-gallery/13.jpg", "assets/vehicles/glc180-gallery/14.jpg", "assets/vehicles/glc180-gallery/15.jpg", "assets/vehicles/glc180-gallery/16.jpg", "assets/vehicles/glc180-gallery/17.jpg", "assets/vehicles/glc180-gallery/18.jpg"] : [img.currentSrc || img.src];
+      let position = 0;
+      function showPhoto() { photo.src = images[position]; photo.alt = img.alt; caption.textContent = img.alt + (images.length > 1 ? ' — ' + (position + 1) + ' / ' + images.length : ''); }
+      let controls = dialog.querySelector('.vehicle-gallery-controls');
+      if (!controls) { controls = document.createElement('div'); controls.className = 'vehicle-gallery-controls'; dialog.appendChild(controls); }
+      controls.replaceChildren();
+      if (images.length > 1) {
+        [['← Önceki', -1], ['Sonraki →', 1]].forEach(function (item) {
+          const button = document.createElement('button'); button.type = 'button'; button.textContent = item[0];
+          button.style.cssText = 'margin:8px;padding:10px 20px;background:#282828;color:#fff;border:1px solid #666;border-radius:6px;cursor:pointer';
+          button.addEventListener('click', function () { position = (position + item[1] + images.length) % images.length; showPhoto(); }); controls.appendChild(button);
+        });
+      }
+      showPhoto(); dialog.showModal();
+    }
     img.addEventListener('click', openPhoto);
     img.addEventListener('keydown', function (event) { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openPhoto(); } });
   });
