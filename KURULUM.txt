@@ -1,7 +1,0 @@
-Tüm site kodları ve görseller dahildir. Yalnızca doğrulanan 18 güncel araç listelenir. Mercedes GLC 180 orijinal filigransız kapak fotoğrafı ve 18 fotoğraflık galeri içerir. Diğer 17 aracın önceki görselleri korunmuştur. Chery bilgi eksikliği nedeniyle eklenmedi.
-
-Dosyaları mevcut projeye aktarırken aynı adlı dosyaları DEĞİŞTİRİN, copy adında kopya oluşturmayın. Mevcut .git klasörünü koruyun.
-
-git add .
-git commit -m "Update complete site with original GLC gallery"
-git push origin main
