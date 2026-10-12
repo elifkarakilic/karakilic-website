@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/kiralik-is-makinesi.html",
+      "destination": "/giresun-vinc-kiralama.html",
+      "permanent": true
+    },
+    {
+      "source": "/kiralik-is-makinesi",
+      "destination": "/giresun-vinc-kiralama.html",
+      "permanent": true
+    }
+  ]
+}
